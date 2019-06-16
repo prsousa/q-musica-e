@@ -1,0 +1,302 @@
+[
+  {
+    "artist": "Zé Amaro",
+    "music": "Namoro Bom",
+    "file": "ZeAmaro_Namoro_no Escuro.mp3",
+    "start": 10
+  },
+  {
+    "artist": "Zé Amaro",
+    "music": "Chegou o Zé",
+    "file": "ZeAmaro_ChegouOZe.mp3",
+    "start": 10
+  },
+  {
+    "artist": "Céline Dion",
+    "music": "My Heart Will Go On",
+    "file": "CelineDion_MyHeartWillGoOn.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Whitney Houston",
+    "music": "I Will Always Love You",
+    "file": "WhitneyHouston_IWill AlwaysLoveYou.mp3",
+    "start": 190
+  },
+  {
+    "artist": "Abba",
+    "music": "Mamma Mia",
+    "file": "Abba_MammaMia.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Psirico",
+    "music": "Lepo Lepo",
+    "file": "Psirico_LepoLepo.mp3",
+    "start": 6
+  },
+  {
+    "artist": "King Africa",
+    "music": "Bomba",
+    "file": "KingAfrica_Bomba.mp3",
+    "start": 5
+  },
+  {
+    "artist": "Enrique Iglesias",
+    "music": "Rhythm Divine",
+    "file": "EnriqueInglesisas_RhythmDivine.mp3",
+    "start": 41
+  },
+  {
+    "artist": "D'zrt",
+    "music": "Para Mim Tanto Me Faz",
+    "file": "Dzrt_ParaMimTantoMeFaz.mp3",
+    "start": 5
+  },
+  {
+    "artist": "Rui Veloso",
+    "music": "Anel de Rubi",
+    "file": "RuiVeloso_AnelDeRubi.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Conan Osíris",
+    "music": "Telemóveis",
+    "file": "ConanOsiris_Telemoveis.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Tony Carreira",
+    "music": "Sonhos de Menino",
+    "file": "TonyCarreira_SonhosDeMenino.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Ana Malhoa",
+    "music": "Tá Turbinada",
+    "file": "AnaMalhoa_TaTurbinada.mp3",
+    "start": 91
+  },
+  {
+    "artist": "Quim Barreiros",
+    "music": "A Garagem da Vizinha",
+    "file": "QuimBarreiros_AGaragemDaVizinha.mp3",
+    "start": 6
+  },
+  {
+    "artist": "Emanuel",
+    "music": "O Ritmo Do Amor (Kuduro)",
+    "file": "Emanuel_ORitmoDoAmor.mp3",
+    "start": 10
+  },
+  {
+    "artist": "Toy",
+    "music": "Coração Não Tem Idade (Vou Beijar)",
+    "file": "Toy_CoracaoNaoTemIdade.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Lou Bega",
+    "music": "Mambo No. 5 (A Little Bit of...)",
+    "file": "LouBega_MamboNo5.mp3",
+    "start": 18
+  },
+  {
+    "artist": "PSY",
+    "music": "GANGNAM STYLE",
+    "file": "PSY_GangnamStyle.mp3",
+    "start": 69
+  },
+  {
+    "artist": "Maria Leal",
+    "music": "Tá Demais",
+    "file": "MariaLeal_TaDemais.mp3",
+    "start": 56
+  },
+  {
+    "artist": "Angélico",
+    "music": "Bailarina",
+    "file": "Angelico_Bailarina.mp3",
+    "start": 96
+  },
+  {
+    "artist": "Floribella",
+    "music": "Pobres dos ricos",
+    "file": "Floribella_PobresDosRicos.mp3",
+    "start": 38
+  },
+  {
+    "artist": "Excesso",
+    "music": "Eu Sou Aquele",
+    "file": "Excesso_EuSouAquele.mp3",
+    "start": 80
+  },
+  {
+    "artist": "Santamaria",
+    "music": "Eu Sei Tu És",
+    "file": "Santamaria_EuSeiTuEs.mp3",
+    "start": 48
+  },
+  {
+    "artist": "Alex",
+    "music": "Mister Gay",
+    "file": "Alex_MisterGay.mp3",
+    "start": 63
+  },
+  {
+    "artist": "Ruth Marlene",
+    "music": "Coisinha Sexy",
+    "file": "RuthMarlene_CoisinhaSexy.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Rosinha",
+    "music": "Eu Levo No Pacote",
+    "file": "Rosinha_EuLevoNoPacote.mp3",
+    "start": 35
+  },
+  {
+    "artist": "Toy",
+    "music": "És Tão Sensual",
+    "file": "Toy_EsTaoSensual.mp3",
+    "start": 30
+  },
+  {
+    "artist": "Rio Grande",
+    "music": "Postal dos Correios",
+    "file": "RioGrande_PostalDosCorreios.mp3",
+    "start": 15
+  },
+  {
+    "artist": "Adiafa",
+    "music": "As meninas da Ribeira do Sado",
+    "file": "Adiafa_AsMeninasDaRibeiraDoSado.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Queen",
+    "music": "Bohemian Rhapsody",
+    "file": "Queen_BohemianRhapsody.mp3",
+    "start": 238
+  },
+  {
+    "artist": "Abba",
+    "music": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+    "file": "Abba_GimmeGimmeGimmeAManAfterMidnight.mp3",
+    "start": 70
+  },
+  {
+    "artist": "The Rolling Stones",
+    "music": "(I Can't Get No) Satisfaction",
+    "file": "RollingStones_ICantGetNoSatisfaction.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Coldplay",
+    "music": "Viva La Vida",
+    "file": "Coldplay_VivaLaVida.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Kungs",
+    "music": "This Girl",
+    "file": "Kungs_ThisGirls.mp3",
+    "start": 62
+  },
+  {
+    "artist": "Guns N' Roses",
+    "music": "Sweet Child O' Mine",
+    "file": "GunsNRoses_SweetChildOMine.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Aerosmith",
+    "music": "I Don't Want to Miss a Thing",
+    "file": "Aerosmith_IDontWantToMissAThing.mp3",
+    "start": 181
+  },
+  {
+    "artist": "Bon Jovi",
+    "music": "It's My Life",
+    "file": "BonJovi_ItsMyLife.mp3",
+    "start": 25
+  },
+  {
+    "artist": "Spice Girls",
+    "music": "Wannabe",
+    "file": "SpiceGirls_Wannabe.mp3",
+    "start": 79
+  },
+  {
+    "artist": "Mariah Carey",
+    "music": "All I Want For Christmas Is You",
+    "file": "MariahCarey_AllIWantForChistmasIsYou.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Shakira",
+    "music": "Whenever, Wherever",
+    "file": "Shakira_WheneverWherever.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Demis Roussos",
+    "music": "Goodbye, My Love, Goodbye",
+    "file": "DemisRoussos_GoodbyeMyLoveGoodbye.mp3",
+    "start": 60
+  },
+  {
+    "artist": "Boney M",
+    "music": "Daddy Cool",
+    "file": "BoneyM_DaddyCool.mp3",
+    "start": 34
+  },
+  {
+    "artist": "Village People",
+    "music": "YMCA",
+    "file": "VillagePeople_YMCA.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Bee Gees",
+    "music": "Stayin' Alive",
+    "file": "BeeGees_StayingAlive.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Michael Jackson",
+    "music": "Black Or White",
+    "file": "MichaelJackson_BlackOrWhite.mp3",
+    "start": 155
+  },
+  {
+    "artist": "",
+    "music": "",
+    "file": ".mp3",
+    "start": 0
+  },
+  {
+    "artist": "",
+    "music": "",
+    "file": ".mp3",
+    "start": 0
+  },
+  {
+    "artist": "",
+    "music": "",
+    "file": ".mp3",
+    "start": 0
+  },
+  {
+    "artist": "",
+    "music": "",
+    "file": ".mp3",
+    "start": 0
+  },
+  {
+    "artist": "",
+    "music": "",
+    "file": ".mp3",
+    "start": 0
+  }
+]
