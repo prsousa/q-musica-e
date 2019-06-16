@@ -9,6 +9,8 @@ import { tickClock, setPoints } from "../redux/actions/game-actions";
 import Musics from "../musics";
 import Rules from "../rules";
 import AudioPlayer from "./AudioPlayer";
+import GameTeamReview from "./GameTeamReview";
+import GameTeamMusicReview from "./GameTeamMusicReview";
 
 const COUNTDOWN = 5;
 
@@ -28,7 +30,8 @@ class GameTeamDetail extends Component {
       this.setState({
         isPlaying: false,
         countdown: COUNTDOWN,
-        canSkip: false
+        canSkip: false,
+        reviewMusicIndex: prevProps.currentMusicIndex
       });
     }
   }
@@ -40,6 +43,7 @@ class GameTeamDetail extends Component {
       if (++this.musicTime >= 10) {
         this.setState({ canSkip: true });
       }
+    } else if (this.state.reviewMusicIndex >= 0) {
     } else {
       const countdown = this.state.countdown - 1;
       const reached_zero = countdown < 1;
@@ -59,6 +63,12 @@ class GameTeamDetail extends Component {
     clearInterval(this.timer);
   }
 
+  skipPreview() {
+    this.setState({
+      reviewMusicIndex: -1
+    });
+  }
+
   render(props) {
     const { game, team, currentMusicIndex } = this.props;
 
@@ -74,10 +84,10 @@ class GameTeamDetail extends Component {
 
     const { id, roundSeconds } = game;
 
-    if (!team || team.completed || currentMusicIndex === -1)
+    if (!team)
       return (
         <div>
-          <p>{!team ? "Equipa Não Encontrada" : "Esta Equipa Já Jogou"}</p>
+          <p>Equipa Não Encontrada</p>
           <Link to={`/games/${id}`}>
             <Button color="danger">Voltar ao Jogo</Button>
           </Link>
@@ -87,13 +97,37 @@ class GameTeamDetail extends Component {
     const { elapsedSeconds, musics } = team;
     const remainingSeconds = roundSeconds - elapsedSeconds;
 
+    if (this.state.reviewMusicIndex >= 0)
+      return (
+        <GameTeamMusicReview
+          music={musics[this.state.reviewMusicIndex]}
+          skipPreview={this.skipPreview.bind(this)}
+        />
+      );
+
+    if (team.completed || currentMusicIndex === -1)
+      return (
+        <div className="my-3">
+          <h1>
+            Q-Música é? #{id} | Equipa #{team.id}
+          </h1>
+          <hr />
+          <GameTeamReview musics={musics} />
+          <hr />
+          <Link to={`/games/${id}`}>
+            <Button color="danger">Voltar ao Jogo</Button>
+          </Link>
+        </div>
+      );
+
     const currentMusic = musics[currentMusicIndex];
     const audioSource = `/musics/${Musics[currentMusic.musicId].file}`;
     const audioStartTime = (Musics[currentMusic.musicId].start || 0) * 1;
+    console.log(audioSource);
 
     return (
       <div>
-        <h1>{remainingSeconds}</h1>
+        <p className="display-1">{remainingSeconds}</p>
         <hr />
         {!this.state.isPlaying ? (
           <h2>{this.state.countdown}</h2>
@@ -102,6 +136,7 @@ class GameTeamDetail extends Component {
             <AudioPlayer source={audioSource} startTime={audioStartTime} />
             <div>
               <Button
+                size="lg"
                 color="danger"
                 disabled={currentMusic.guessedMusic}
                 onClick={() =>
@@ -111,8 +146,9 @@ class GameTeamDetail extends Component {
                 }
               >
                 Acertou na Música (+{Rules.music})
-              </Button>
+              </Button>{" "}
               <Button
+                size="lg"
                 color="danger"
                 disabled={currentMusic.guessedArtist}
                 onClick={() =>
@@ -122,8 +158,9 @@ class GameTeamDetail extends Component {
                 }
               >
                 Acertou no Artista (+{Rules.artist})
-              </Button>
+              </Button>{" "}
               <Button
+                size="lg"
                 color="danger"
                 disabled={currentMusic.bonus}
                 onClick={() =>
@@ -133,8 +170,9 @@ class GameTeamDetail extends Component {
                 }
               >
                 Espalhou Magia! (+{Rules.bonus})
-              </Button>
+              </Button>{" "}
               <Button
+                size="lg"
                 color="danger"
                 disabled={!this.state.canSkip}
                 onClick={() =>

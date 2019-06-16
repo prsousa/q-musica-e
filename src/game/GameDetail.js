@@ -22,17 +22,18 @@ class GameDetail extends Component {
     const nextTeam = pendingTeams[0];
 
     return (
-      <div>
+      <div className="my-3">
         <h1>Q-Música é? #{id}</h1>
         <hr />
-        <h2>Equipas</h2>
-        <Card>
+        <h2 className="py-3">Equipas</h2>
+        <Card className="p-4">
           <Table>
             <thead>
               <tr>
                 <th>Equipa</th>
-                <th>Já Jogou?</th>
+                <th>Finalizado?</th>
                 <th>Pontos</th>
+                <th />
               </tr>
             </thead>
             <tbody>
@@ -41,6 +42,9 @@ class GameDetail extends Component {
                   <th scope="row">{team.id}</th>
                   <td>{team.completed ? "Sim" : "Não"}</td>
                   <td>{team.points}</td>
+                  <td>
+                    <Link to={`/games/${id}/teams/${team.id}/`}>ver</Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -48,13 +52,23 @@ class GameDetail extends Component {
         </Card>
         <hr />
         {nextTeam ? (
-          <Link to={`/games/${id}/teams/${nextTeam.id}`}>
-            <Button color="danger">
-              Começar Próxima Ronda <br />
-              (Equipa {nextTeam.id})
-            </Button>
-          </Link>
+          <div>
+            <Link
+              className="nounderline"
+              to={`/games/${id}/teams/${nextTeam.id}`}
+            >
+              <Button block size="lg" color="success">
+                <strong>Equipa {nextTeam.id}</strong>
+                <br />
+                Começar Próxima Ronda
+              </Button>
+            </Link>
+            <hr />
+          </div>
         ) : null}
+        <Link to="/games/">
+          <Button color="primary">Ver Jogos</Button>
+        </Link>
       </div>
     );
   }

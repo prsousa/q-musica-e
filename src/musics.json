@@ -75,7 +75,7 @@
     "artist": "Ana Malhoa",
     "music": "Tá Turbinada",
     "file": "AnaMalhoa_TaTurbinada.mp3",
-    "start": 91
+    "start": 101
   },
   {
     "artist": "Quim Barreiros",
@@ -129,7 +129,7 @@
     "artist": "Excesso",
     "music": "Eu Sou Aquele",
     "file": "Excesso_EuSouAquele.mp3",
-    "start": 80
+    "start": 66
   },
   {
     "artist": "Santamaria",
@@ -183,7 +183,7 @@
     "artist": "Abba",
     "music": "Gimme! Gimme! Gimme! (A Man After Midnight)",
     "file": "Abba_GimmeGimmeGimmeAManAfterMidnight.mp3",
-    "start": 70
+    "start": 60
   },
   {
     "artist": "The Rolling Stones",
@@ -249,7 +249,7 @@
     "artist": "Boney M",
     "music": "Daddy Cool",
     "file": "BoneyM_DaddyCool.mp3",
-    "start": 34
+    "start": 4
   },
   {
     "artist": "Village People",
@@ -270,33 +270,183 @@
     "start": 155
   },
   {
-    "artist": "",
-    "music": "",
-    "file": ".mp3",
+    "artist": "Beatriz Costa",
+    "music": "Aldeia da Roupa Branca",
+    "file": "BeatrizCosta_AldeiaDaRoupaBranca.mp3",
+    "start": 12
+  },
+  {
+    "artist": "Los Del Rio",
+    "music": "La Macarena",
+    "file": "LosDelRio_LaMacarena.mp3",
+    "start": 22
+  },
+  {
+    "artist": "AGIR",
+    "music": "Parte-me o Pescoço",
+    "file": "AGIR_ParteMeOPescoco.mp3",
     "start": 0
   },
   {
-    "artist": "",
-    "music": "",
-    "file": ".mp3",
+    "artist": "Las Ketchup",
+    "music": "Aserejé",
+    "file": "LasKetchup_Asereje.mp3",
+    "start": 12
+  },
+  {
+    "artist": "Aqua",
+    "music": "Barbie Girl",
+    "file": "Aqua_BarbieGirl.mp3",
+    "start": 13
+  },
+  {
+    "artist": "Vengaboys",
+    "music": "Boom Boom Boom Boom",
+    "file": "Vengaboys_BoomBoomBoomBoom.mp3",
+    "start": 54
+  },
+  {
+    "artist": "DJ Otzi",
+    "music": "Hey Baby (If You'll be My Girl)",
+    "file": "DJOtzi_HeyBabyIfYoullBeMyGirl.mp3",
+    "start": 12
+  },
+  {
+    "artist": "O-Zone",
+    "music": "Dragostea Din Tei",
+    "file": "OZone_DragosteaDinTei.mp3",
+    "start": 53
+  },
+  {
+    "artist": "Fernando Correia Marques",
+    "music": "O Burrito",
+    "file": "FernandoCorreiaMarques_OBurrito.mp3",
     "start": 0
   },
   {
-    "artist": "",
-    "music": "",
-    "file": ".mp3",
+    "artist": "Fernando Correia Marques",
+    "music": "Carocha do Amor",
+    "file": "FernandoCorreiaMarques_CarochaDoAmor.mp3",
+    "start": 17
+  },
+  {
+    "artist": "Mónica Sintra",
+    "music": "Afinal Havia Outra",
+    "file": "MonicaSintra_AfinalHaviaOutra.mp3",
+    "start": 41
+  },
+  {
+    "artist": "Mónica Sintra",
+    "music": "Na Minha Cama Com Ela",
+    "file": "MonicaSintra_NaMinhaCamaComEla.mp3",
+    "start": 120
+  },
+  {
+    "artist": "Ágata",
+    "music": "Comunhão de Bens",
+    "file": "Agata_ComunhaoDeBens.mp3",
+    "start": 13
+  },
+  {
+    "artist": "Romana",
+    "music": "Já Não Sou Bébé",
+    "file": "Romana_JaNaoSouBebe.mp3",
     "start": 0
   },
   {
-    "artist": "",
-    "music": "",
-    "file": ".mp3",
+    "artist": "Marco Paulo",
+    "music": "Taras e Manias",
+    "file": "MarcoPaulo_TarasEManias.mp3",
+    "start": 50
+  },
+  {
+    "artist": "Ruth Marlene",
+    "music": "A Moda do Pisca Pisca",
+    "file": "RuthMarlene_AModaDoPiscaPisca.mp3",
+    "start": 40
+  },
+  {
+    "artist": "D'ARRASAR",
+    "music": "A Rainha Da Noite",
+    "file": "DARRASAR_ARainhaDaNoite.mp3",
+    "start": 8
+  },
+  {
+    "artist": "Tonicha",
+    "music": "Zumba Na Caneca",
+    "file": "Tonicha_ZumaNaCaneca.mp3",
+    "start": 5
+  },
+  {
+    "artist": "Zé Cabra",
+    "music": "Deixei Tudo Por Ela",
+    "file": "ZeCabra_DeixeiTudoPorEla.mp3",
+    "start": 10
+  },
+  {
+    "artist": "Saul",
+    "music": "O Bacalhau Quer Alho",
+    "file": "Saul_OBacalhauQuerAlho.mp3",
+    "start": 12
+  },
+  {
+    "artist": "Los Hermanos",
+    "music": "Anna Julia",
+    "file": "LosHermanos_AnnaJulia.mp3",
     "start": 0
   },
   {
-    "artist": "",
-    "music": "",
-    "file": ".mp3",
+    "artist": "Gipsy Kings",
+    "music": "Bamboleo",
+    "file": "GipsyKings_Bamboleo.mp3",
+    "start": 42
+  },
+  {
+    "artist": "Emanuel",
+    "music": "Pimba Pimba",
+    "file": "Emanuel_PimbaPimba.mp3",
+    "start": 7
+  },
+  {
+    "artist": "Clemente",
+    "music": "Vais Partir",
+    "file": "Clemente_VaisPartir.mp3",
+    "start": 8
+  },
+  {
+    "artist": "Clemente",
+    "music": "Colmeia do Amor",
+    "file": "Clemente_ColmeiaDoAmor.mp3",
+    "start": 40
+  },
+  {
+    "artist": "Iris",
+    "music": "Atira-te ao mar",
+    "file": "Iris_AtiraTeAoMar.mp3",
+    "start": 40
+  },
+  {
+    "artist": "Iris",
+    "music": "Oh Mãe!!",
+    "file": "Iris_OMae.mp3",
+    "start": 20
+  },
+  {
+    "artist": "Adelaide Ferreira",
+    "music": "Papel Principal",
+    "file": "AdelaideFerreira_PapelPrincipal.mp3",
+    "start": 179
+  },
+  {
+    "artist": "Antonio Variações",
+    "music": "O Corpo é Que Paga",
+    "file": "AntonioVariacoes_OCorpoEQuePaga.mp3",
+    "start": 0
+  },
+  {
+    "artist": "Nonstop",
+    "music": "Ao Limite Eu Vou",
+    "file": "Nonstop_AoLimiteEuVou.mp3",
     "start": 0
   }
 ]

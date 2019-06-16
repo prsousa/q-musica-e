@@ -7,13 +7,11 @@ import GameTeamDetail from "./GameTeamDetail";
 function GameApp() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Router>
-          <Route path="/games/" exact component={GameList} />
-          <Route path="/games/:id" exact component={GameDetail} />
-          <Route path="/games/:id/teams/:teamId" component={GameTeamDetail} />
-        </Router>
-      </header>
+      <Router>
+        <Route path="/games/" exact component={GameList} />
+        <Route path="/games/:id" exact component={GameDetail} />
+        <Route path="/games/:id/teams/:teamId" component={GameTeamDetail} />
+      </Router>
     </div>
   );
 }

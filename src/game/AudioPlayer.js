@@ -18,8 +18,6 @@ class AudioPlayer extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.source !== prevProps.source) {
-      console.log(this.props.source);
-
       this.pause();
       this.audio = new Audio(this.props.source);
       this.play();

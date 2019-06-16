@@ -16,7 +16,7 @@ const initialState = {
 
 const create_game = (
   state,
-  { teamCardinality = 2, roundSeconds = 90, musicCardinality = 0 }
+  { teamCardinality = 2, roundSeconds = 120, musicCardinality = 0 }
 ) => {
   const musicIdx = [...Array(musicCardinality).keys()];
   musicIdx.sort(() => Math.random() - 0.5); // shuffles the array
@@ -80,9 +80,9 @@ const set_points = (state, params) => {
   teams[teamId].points = musics.reduce(
     (acc, m) =>
       acc +
-      musics[musicIndex].guessedArtist * Rules.artist +
-      musics[musicIndex].guessedMusic * Rules.music +
-      musics[musicIndex].bonus * Rules.bonus,
+      m.guessedArtist * Rules.artist +
+      m.guessedMusic * Rules.music +
+      m.bonus * Rules.bonus,
     0
   );
 
@@ -96,8 +96,6 @@ const set_points = (state, params) => {
   return { ...state, list };
 };
 
-//
-//
 const gameList = (state = initialState, action) => {
   let res;
 

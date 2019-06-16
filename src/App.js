@@ -5,23 +5,23 @@ import GameApp from "./game/GameApp";
 
 function WelcomePage() {
   return (
-    <header className="App-header">
+    <div>
       <img src="/logo.png" className="App-logo" alt="logo" />
       <p>Q-Música é?</p>
-      <Link className="App-link" to="/games/">
-        Jogar
-      </Link>
-    </header>
+      <Link to="/games/">Jogar</Link>
+    </div>
   );
 }
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Route path="/" exact component={WelcomePage} />
-        <Route path="/games" component={GameApp} />
-      </Router>
+      <header className="App-header">
+        <Router>
+          <Route path="/" exact component={WelcomePage} />
+          <Route path="/games" component={GameApp} />
+        </Router>
+      </header>
     </div>
   );
 }

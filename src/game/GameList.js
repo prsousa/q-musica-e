@@ -18,15 +18,14 @@ class GameList extends Component {
 
   render(props) {
     const { gameList } = this.props;
-
     return (
-      <div>
+      <div className="my-3">
         <h1>Q-Música é?</h1>
         <hr />
         <div>
-          <h2>Histórico de Jogos</h2>
+          <h2 className="py-3">Histórico de Jogos</h2>
           {gameList.length > 0 ? (
-            <Card>
+            <Card className="p-4">
               <Table>
                 <thead>
                   <tr>
@@ -37,16 +36,18 @@ class GameList extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {gameList.map(game => (
-                    <tr key={game.id}>
-                      <th scope="row">{game.id}</th>
-                      <td>{game.teams.length}</td>
-                      <td>{game.roundSeconds}</td>
-                      <td>
-                        <Link to={`/games/${game.id}`}>ver</Link>
-                      </td>
-                    </tr>
-                  ))}
+                  {gameList
+                    .sort((a, b) => b.id - a.id)
+                    .map(game => (
+                      <tr key={game.id}>
+                        <th scope="row">{game.id}</th>
+                        <td>{game.teams.length}</td>
+                        <td>{game.roundSeconds}</td>
+                        <td>
+                          <Link to={`/games/${game.id}`}>ver</Link>
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </Table>
             </Card>
@@ -56,8 +57,9 @@ class GameList extends Component {
         </div>
         <hr />
         <Button
-          color="danger"
-          onClick={() => this.props.createGame(4, 90, Musics.length)}
+          size="lg"
+          color="success"
+          onClick={() => this.props.createGame(4, 120, Musics.length)}
         >
           Novo Jogo
         </Button>
@@ -68,7 +70,7 @@ class GameList extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    gameList: state.gameList.list
+    gameList: [...state.gameList.list]
   };
 }
 
