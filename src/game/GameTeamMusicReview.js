@@ -4,7 +4,7 @@ import Musics from "../musics";
 import AudioPlayer from "./AudioPlayer";
 
 function GameTeamMusicReview(props) {
-  const { music, skipPreview } = props;
+  const { music, skipPreview, setPoints } = props;
   const musicDb = Musics[music.musicId];
   const audioSource = `/musics/${Musics[music.musicId].file}`;
   const audioStartTime = (musicDb.start || 0) * 1;
@@ -14,15 +14,42 @@ function GameTeamMusicReview(props) {
 
   return (
     <div>
-      <AudioPlayer source={audioSource} startTime={audioStartTime} />
-      <h1>
+      <AudioPlayer source={audioSource} startTime={audioStartTime} delay={2} />
+      <img src="/logo.png" className="App-logo Listening-logo" alt="logo" />
+      <h1 className="text-uppercase">
         {musicDb.artist} - {musicDb.music}
       </h1>
       <hr />
       <h2 className="text-dark">
-        Artista {music.guessedArtist ? CheckSign : CrossSign} | Música{" "}
-        {music.guessedMusic ? CheckSign : CrossSign} | Bónus{" "}
-        {music.bonus ? CheckSign : CrossSign}
+        <span
+          onClick={() =>
+            setPoints({
+              guessedMusic: !music.guessedMusic
+            })
+          }
+        >
+          Música {music.guessedMusic ? CheckSign : CrossSign}
+        </span>
+        {" | "}
+        <span
+          onClick={() =>
+            setPoints({
+              guessedArtist: !music.guessedArtist
+            })
+          }
+        >
+          Artista {music.guessedArtist ? CheckSign : CrossSign}
+        </span>
+        {" | "}
+        <span
+          onClick={() =>
+            setPoints({
+              bonus: !music.bonus
+            })
+          }
+        >
+          Magia {music.bonus ? CheckSign : CrossSign}
+        </span>
       </h2>
       <hr />
       <Button size="lg" color="primary" onClick={skipPreview}>

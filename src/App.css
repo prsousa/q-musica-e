@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+.Listening-logo {
+  /* height: 20vmin; */
+}
+
 .App-header {
   background-color: #eee;
   min-height: 100vh;

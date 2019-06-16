@@ -6,11 +6,8 @@ import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 
 import { tickClock, setPoints } from "../redux/actions/game-actions";
-import Musics from "../musics";
-import Rules from "../rules";
-import AudioPlayer from "./AudioPlayer";
-import GameTeamReview from "./GameTeamReview";
-import GameTeamMusicReview from "./GameTeamMusicReview";
+import GamePlay from "./GamePlay";
+import ScoreDisplayer from "./ScoreDisplayer";
 
 const COUNTDOWN = 5;
 
@@ -82,110 +79,30 @@ class GameTeamDetail extends Component {
         </div>
       );
 
-    const { id, roundSeconds } = game;
-
     if (!team)
       return (
         <div>
           <p>Equipa Não Encontrada</p>
-          <Link to={`/games/${id}`}>
+          <Link to={`/games/${game.id}`}>
             <Button color="danger">Voltar ao Jogo</Button>
           </Link>
         </div>
       );
-
-    const { elapsedSeconds, musics } = team;
-    const remainingSeconds = roundSeconds - elapsedSeconds;
-
-    if (this.state.reviewMusicIndex >= 0)
-      return (
-        <GameTeamMusicReview
-          music={musics[this.state.reviewMusicIndex]}
-          skipPreview={this.skipPreview.bind(this)}
-        />
-      );
-
-    if (team.completed || currentMusicIndex === -1)
-      return (
-        <div className="my-3">
-          <h1>
-            Q-Música é? #{id} | Equipa #{team.id}
-          </h1>
-          <hr />
-          <GameTeamReview musics={musics} />
-          <hr />
-          <Link to={`/games/${id}`}>
-            <Button color="danger">Voltar ao Jogo</Button>
-          </Link>
-        </div>
-      );
-
-    const currentMusic = musics[currentMusicIndex];
-    const audioSource = `/musics/${Musics[currentMusic.musicId].file}`;
-    const audioStartTime = (Musics[currentMusic.musicId].start || 0) * 1;
-    console.log(audioSource);
 
     return (
       <div>
-        <p className="display-1">{remainingSeconds}</p>
-        <hr />
-        {!this.state.isPlaying ? (
-          <h2>{this.state.countdown}</h2>
-        ) : (
-          <div>
-            <AudioPlayer source={audioSource} startTime={audioStartTime} />
-            <div>
-              <Button
-                size="lg"
-                color="danger"
-                disabled={currentMusic.guessedMusic}
-                onClick={() =>
-                  this.props.setPoints(id, team.id, currentMusicIndex, {
-                    guessedMusic: true
-                  })
-                }
-              >
-                Acertou na Música (+{Rules.music})
-              </Button>{" "}
-              <Button
-                size="lg"
-                color="danger"
-                disabled={currentMusic.guessedArtist}
-                onClick={() =>
-                  this.props.setPoints(id, team.id, currentMusicIndex, {
-                    guessedArtist: true
-                  })
-                }
-              >
-                Acertou no Artista (+{Rules.artist})
-              </Button>{" "}
-              <Button
-                size="lg"
-                color="danger"
-                disabled={currentMusic.bonus}
-                onClick={() =>
-                  this.props.setPoints(id, team.id, currentMusicIndex, {
-                    bonus: true
-                  })
-                }
-              >
-                Espalhou Magia! (+{Rules.bonus})
-              </Button>{" "}
-              <Button
-                size="lg"
-                color="danger"
-                disabled={!this.state.canSkip}
-                onClick={() =>
-                  this.props.setPoints(id, team.id, currentMusicIndex, {
-                    listened: true
-                  })
-                }
-              >
-                Passar
-              </Button>
-            </div>
-          </div>
-        )}
+        <ScoreDisplayer game={game} highlightedTeam={team} />
+        <GamePlay
+          game={game}
+          team={team}
+          isPlaying={this.state.isPlaying}
+          countdown={this.state.countdown}
+          reviewMusicIndex={this.state.reviewMusicIndex}
+          currentMusicIndex={currentMusicIndex}
+          setPoints={this.props.setPoints.bind(this)}
+          skipPreview={this.skipPreview.bind(this)}
+          canSkip={this.state.canSkip}
+        />
       </div>
     );
   }
