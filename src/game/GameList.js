@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 
-import { Button, Card, Table } from "reactstrap";
+import { Card, Table } from "reactstrap";
 
 import { createGame } from "../redux/actions/game-actions";
-import Musics from "../musics";
+import GameCreate from "./GameCreate";
 
 class GameList extends Component {
   componentDidUpdate(prevProps) {
@@ -56,13 +56,7 @@ class GameList extends Component {
           )}
         </div>
         <hr />
-        <Button
-          size="lg"
-          color="success"
-          onClick={() => this.props.createGame(4, 120, Musics.length)}
-        >
-          Novo Jogo
-        </Button>
+        <GameCreate createGame={this.props.createGame} />
       </div>
     );
   }
