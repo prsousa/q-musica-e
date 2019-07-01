@@ -26,6 +26,7 @@ class GameTeamDetail extends Component {
       this.musicTime = 0;
       this.setState({
         isPlaying: false,
+        loadingAudio: true,
         countdown: COUNTDOWN,
         canSkip: false,
         reviewMusicIndex: prevProps.currentMusicIndex
@@ -41,7 +42,7 @@ class GameTeamDetail extends Component {
         this.setState({ canSkip: true });
       }
     } else if (this.state.reviewMusicIndex >= 0) {
-    } else {
+    } else if (!this.state.loadingAudio) {
       const countdown = this.state.countdown - 1;
       const reached_zero = countdown < 1;
 
@@ -63,6 +64,12 @@ class GameTeamDetail extends Component {
   skipPreview() {
     this.setState({
       reviewMusicIndex: -1
+    });
+  }
+
+  onMusicLoad() {
+    this.setState({
+      loadingAudio: false
     });
   }
 
@@ -99,8 +106,10 @@ class GameTeamDetail extends Component {
           countdown={this.state.countdown}
           reviewMusicIndex={this.state.reviewMusicIndex}
           currentMusicIndex={currentMusicIndex}
+          loadingAudio={this.state.loadingAudio}
           setPoints={this.props.setPoints.bind(this)}
           skipPreview={this.skipPreview.bind(this)}
+          onMusicLoad={this.onMusicLoad.bind(this)}
           canSkip={this.state.canSkip}
         />
       </div>

@@ -3,12 +3,14 @@ import { Component } from "react";
 class AudioPlayer extends Component {
   constructor(props) {
     super(props);
-    const { delay = 0, source } = props;
+    const { source, playing, onLoad, delay = 0 } = props;
     this.audio = new Audio(source);
+    this.audio.onloadeddata = onLoad;
 
-    setTimeout(() => {
-      if (!this.paused) this.play();
-    }, delay * 1000);
+    if (playing)
+      setTimeout(() => {
+        if (!this.paused) this.play();
+      }, delay * 1000);
   }
 
   play() {
@@ -22,6 +24,10 @@ class AudioPlayer extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.playing !== nextProps.playing) {
+      nextProps.playing ? this.play() : this.pause();
+    }
+
     return false;
   }
 

@@ -14,7 +14,12 @@ function GameTeamMusicReview(props) {
 
   return (
     <div>
-      <AudioPlayer source={audioSource} startTime={audioStartTime} delay={2} />
+      <AudioPlayer
+        source={audioSource}
+        startTime={audioStartTime}
+        playing={true}
+        delay={2}
+      />
       <img src="/logo.png" className="App-logo Listening-logo" alt="logo" />
       <h1 className="text-uppercase">
         {musicDb.artist} - {musicDb.music}

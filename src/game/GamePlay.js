@@ -13,12 +13,14 @@ function GamePlay(props) {
     game,
     team,
     isPlaying,
+    loadingAudio,
     countdown,
     reviewMusicIndex,
     skipPreview,
     currentMusicIndex,
     setPoints,
-    canSkip
+    canSkip,
+    onMusicLoad
   } = props;
   const { roundSeconds } = game;
   const gameId = game.id;
@@ -61,11 +63,20 @@ function GamePlay(props) {
     <div>
       <p className="display-1">{remainingSeconds}</p>
       <hr />
-      {!isPlaying ? (
+
+      <AudioPlayer
+        source={audioSource}
+        startTime={audioStartTime}
+        playing={isPlaying}
+        onLoad={onMusicLoad}
+      />
+
+      {loadingAudio ? (
+        <h2>a carregar...</h2>
+      ) : !isPlaying ? (
         <h2>{countdown}</h2>
       ) : (
         <div>
-          <AudioPlayer source={audioSource} startTime={audioStartTime} />
           <div>
             <Button
               size="lg"
